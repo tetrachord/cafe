@@ -18,9 +18,8 @@ public class Cafe {
 
     public double calculateTotalFor(List<String> items) {
 
-        DoubleStream doubleStream = items.stream()
-                .mapToDouble(i -> (MENU.get(i).getPrice()));
-
-        return doubleStream.sum();
+        return items.stream()
+                .mapToDouble(i -> (MENU.get(i).getPrice()))
+                .sum();
     }
 }
